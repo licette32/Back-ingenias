@@ -50,13 +50,30 @@ function obtenerMaximo(num1, num2, num3){
 obtenerMaximo(2, 4, 15); // Muestra el valor máximo entre los tres números
 
 
-// Condicionales
+// 1. Condicionales
 const miNombreCompleto = "Jennyfer Muller";
 
 if (miNombreCompleto !== '') {
-    console.log('Bienvenida ' ${miNombreCompleto});
+    console.log('Bienvenida '`${miNombreCompleto}`);
 } else {
     console.error('No se reconoce el usuario, o el usuaio está vacio');
 }
 
+// 2. condicionales operadores lógicos
+const esNombreC = 'Juana Aldao';
+const login = false;
+
+if (esNombreC !== '' && login === false) {
+    console.log('Bienvenida '`${esNombreC}`);
+    login = true;
+} else {
+    console.error('No se reconoce el usuario, o el usuaio está vacio');
+}
+
+// Ciclos de iteración
+const paisesLatinos = ['Argentina', 'Colombia', 'Chile', 'Perú', 'Uruguay'];
+
+for (let i = 0; i < paisesLatinos.length; i++) {
+    console.log(paisesLatinos[i]);
+} // Muestra todos los países de la lista
 
