@@ -46,3 +46,38 @@ console.log(persona.direccion.ciudad); // Brinkmann
 console.log(persona.hobbies[1]); // correr
 
 // Array de objetos literales
+// array productos informaticos que contiene 3 objetos literales
+let productosInformaticos = [
+    { //cada objeto tiene diferentes propiedades clave-valor
+        nombre: 'Monitor Dell UltraSharp U3415W',
+        precio: 799,
+        resolucion: '3440 x 1440',
+        tamano: '34 pulgadas',
+        tipo: 'IPS',
+        conectividad: 'HDMI, USB 3.0, DisplayPort'
+    },
+    {
+        nombre: 'Portátil Lenovo ThinkPad X1 Carbon',
+        precio: 1399,
+        sistemaOperativo: 'Windows 10 Pro',
+        pantalla: '14 pulgadas',
+        procesador: 'Intel Core i7',
+        memoria: '16 GB',
+        almacenamiento: '512 GB SSD',
+    },
+    {
+        nombre: 'Teclado mecánico Corsair',
+        precio: 199,
+        tipo: 'mecánico',
+        retroIluminacion: 'RGB',
+        macros: true,
+        switches: 'Cherry MX Red',
+    }
+];
+
+// Acceder al precio del primer producto
+console.log(productosInformaticos[0].precio); // 799
+
+// Modificar propiedades de los objetos asignando un nuevo valor a su propiedad correspondiente
+productosInformaticos[1].precio = 749;
+console.log(productosInformaticos[1].precio); // 749
