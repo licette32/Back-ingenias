@@ -30,4 +30,14 @@ const obtenerMaximo4 = array => {
 obtenerMaximo4(arrayNumeros);
 
 // Tambien soportan retornos de resultados
+const arrayNumeros2 = [1, 2, 3, 14, 75, 9, 78];
+const obtenerMaximo5 = array => {
+    return Math.max(...array);
+}
+console.log(`resultado: ${obtenerMaximo5(arrayNumeros2)}`); 
 
+// podemos prescindir de la palabra reservada return, y de usar llaves {} contenedoras
+// si la función solo tiene una línea de código
+const arrayNumeros3 = [1, 2, 3, 8, 24, 67, 9, 99];
+const obtenerMaximo6 = array => Math.max(...array);
+console.log(`resultado: ${obtenerMaximo6(arrayNumeros3)}`);
