@@ -29,4 +29,87 @@ fetch('https://miservidorremoto.com/api/clientes')
     .catch(err => console.error("Se ha producido un error.", err))
     .finally(clientes => console.log("Finalizó la petición"))
 
-    
+
+// ASINCRONISMO
+//Utilizamos funciones asincronicas y callbacks
+// exemplo
+function tareaAsincrona(callback) {
+    setTimeout(function() {
+        callback("resultado de la tarea asincrona");
+    }, 1000);
+}
+console.log("Inicio");
+
+tareaAsincrona(function(resultado) {
+    console.log(resultado);
+});
+console.log("Fin");
+//la funcion recie n argumento callback, que es una funcion q se ejecuta una vez
+//que se ha completado la tarea asíncrona.
+
+
+// ASYNC -AWAIT
+// Se utiliza para trabajar con promesas de una manera más sencilla y legible
+
+//async --> declarar una f asincrona --> devuelve una promesa
+async function tareaAsincrona() {
+    // funcion JS convertida en asincrónica
+    //podemos esperar procesos que tienen un tiempo
+    //indefinido en terminar
+}
+
+//await -->utilizado dentro de una f asincrona --> espera a que una promesa se resuelva o se rechace
+async function tareaAsincrona() {
+    const resultado = await obteniendoDatos();
+        console.table(JSON.parse(resultado));
+}
+
+//try/catch --> para manejar errores en funciones asincrónicas
+async function tareaAsincrona() {
+    try {
+        const resultado = await obteniendoDatos();
+        console.table(JSON.parse(resultado));
+    } catch (error) {
+        console.error("Se ha producido un error", error);
+    }
+}
+
+//desarrollo de app para servidores
+//uso de fetch() para obtener datos de un servidor remoto
+async function obtenerDatos() {
+    try {
+        const resultado = await fetch(URL);
+        const data = await resultado.json();
+        console.table(data);
+    } catch(error) {
+        console.error("Se ha producido un error", error);
+    }
+}
+
+
+//TEMPORIZADORES
+//setTimeout() --> ejecuta una función después de un tiempo determinado
+setTimeout(funcion, tiempo);
+
+//exemplo
+setTimeout(function() {
+    console.log("Hola, soy un temporizador");
+}, 2000); // 2 segundos
+
+//exemplo
+const timeout = setTimeout(() => {
+    console.log('han pasado 2 segundos');
+}, 2000); // 2 segundos
+//clearTimeout(timeout); // cancela el temporizador
+
+//setInterval() --> ejecuta una función de forma repetida en un intervalo de tiempo determinado
+setInterval(function() {
+    console.log('Este mensaje se mostrar+a cada 2 segundos');
+}, 2000); // 2 segundos
+
+// exemplo
+const cancelInterval = setInterval(function() {
+    console.log('Este mensaje se mostrará cada 2 segundos');
+    }, 2000);
+
+clearInterval(cancelInterval); // cancela el intervalo
