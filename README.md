@@ -1,6 +1,6 @@
-# 🚀 Backend Developer - Curso Ingenias+ v1.0
+# 🚀 Backend Developer
 
-Este repositorio contiene los apuntes, ejercicios, proyectos y recursos del curso **Backend - Ingenias+**, una capacitación intensiva orientada a mujeres y disidencias en tecnología, organizada por [Ingenias+](https://www.ingenias.org.ar/) junto a diversas empresas y entidades del ecosistema tech.
+Este repositorio contiene los apuntes, ejercicios, proyectos y recursos de un curso **Backend**.
 
 
 ## 🛠️ Tecnologías y herramientas
@@ -20,7 +20,7 @@ Durante el curso se trabajará con:
 ## 📁 Estructura del repositorio
 
 ```bash
-📦 backend-ingenias
+📦 backend
  ┣ 📂 clases          # Apuntes y materiales de clase
  ┣ 📂 ejercicios      # Prácticas propuestas por los/as docentes
  ┣ 📂 proyectos       # Proyectos prácticos durante el curso
